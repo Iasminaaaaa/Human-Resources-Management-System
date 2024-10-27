@@ -15,26 +15,32 @@ Aceasta aplicatie vine in ajutorul companiilor, punandu-le la dispozitie un mod 
 
 • Obiectiv 4: Gestionarea fara probleme a cererilor de concediu, invoire, demisie, printr-un sistem rapid care ofera sansa primirii unei aprobari sau respingeri din partea managerului intr-un mod eficient
 
-• Obiectiv 5: Oferirea unei modalitati prin care manageri și echipelor să programeze întâlniri de comun acord, să comunice detalii importante și să trimită notificări.
+• Obiectiv 5: Oferirea unei modalitati prin care managerii și echipele lor să programeze întâlniri de comun acord, să comunice detalii importante și să trimită notificări.
 
 ## Arhitectura
   Clasa Angajat contine nume, pozitie, salariu, dataAngajarii, telefon, email, adresa
+
 Metode: actualizeazaInformatii si toString() suprascrisa pentru afisare, adaugaAngajat, stergeAngajat
 
   Clasa RaportPerformanta contine raportId, dataEvaluare, scor, comentarii
+
 Metode: gettere și settere, adaugaRaport
 
   Clasa Cerere contine cerereId, tipCerere, dataInceput, dataSfarsit, status, comentariiManager
-Metoda: actualizeazaStatus, adaugaCerere(cerere)
+
+Metode: actualizeazaStatus, adaugaCerere(cerere)
 
   Clasa Eveniment contine evenimentId, numeEveniment, dataEveniment, locatie
+
 Metode: gettere și settere, adaugaEveniment(eveniment)
+
+Baza de date
 
 1. Tabelul Angajati: Înregistrează informatiile despre angajati
 
 • Coloane:
 
-• angajat_id - Cheia primară, identificator unic pentru fiecare angajat.
+• angajat_id - Cheie primară, identificator unic pentru fiecare angajat.
 
 • nume - Numele complet al angajatului.
 
@@ -56,7 +62,7 @@ Metode: gettere și settere, adaugaEveniment(eveniment)
 
 • Coloane:
 
-• evaluare_id - Cheia primară, identificator unic pentru fiecare raport
+• evaluare_id - Cheie primară, identificator unic pentru fiecare raport
 
 • angajat_id - Foreign key 
 
@@ -114,6 +120,7 @@ Relații principale între tabele:
 • Vizualizarea si modificarea datelor angajatiilor
 
 • Ștergerea informațiilor despre acestia daca demisioneaza/sunt concediati
+ 
  Evaluarea Performanței de catre managerul de echipa
  
 • Crearea de rapoarte in care sunt evaluati angajații pe care ii are in subordine un manager
