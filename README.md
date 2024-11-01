@@ -110,34 +110,34 @@ Relații principale între tabele:
 ## Functionalitati/Exemple utilizare
  Autentificare
 
- Angajatii au un cont cu care se pot autentifica
+-> Angajatii au un cont cu care se pot autentifica
 
  Managementul Angajaților:
  
- Înregistrarea informațiilor despre angajați: Nume, pozitie in firma, salariu, data angajarii, numarul de telefon, email-ul, adresa
+-> Înregistrarea informațiilor despre angajați: Nume, pozitie in firma, salariu, data angajarii, numarul de telefon, email-ul, adresa
 
- Vizualizarea si modificarea datelor angajatiilor
+-> Vizualizarea si modificarea datelor angajatiilor
 
- Ștergerea informațiilor despre acestia daca demisioneaza/sunt concediati
+-> Ștergerea informațiilor despre acestia daca demisioneaza/sunt concediati
  
- Evaluarea Performanței de catre managerul de echipa
+-> Evaluarea Performanței de catre managerul de echipa
  
- Crearea de rapoarte in care sunt evaluati angajații pe care ii are in subordine un manager
+-> Crearea de rapoarte in care sunt evaluati angajații pe care ii are in subordine un manager
 
- Posibilitatea ca angajatii sa ofere feedback pentru evaluarile primite(scoruri, comentarii).
+-> Posibilitatea ca angajatii sa ofere feedback pentru evaluarile primite(scoruri, comentarii).
 
 Gestionarea Cererilor
  
- Tipuri de cerere: cerere de concediu, de invoire, de demisie
+-> Tipuri de cerere: cerere de concediu, de invoire, de demisie
 
- Înaintarea cererilor de concediu (tip de concediu, date).
+-> Înaintarea cererilor de concediu (tip de concediu, date).
 
- Aprobat sau respins de către manageri
+-> Aprobat sau respins de către manageri
 
- Vizualizarea istoricului cererilor unui angajat
+-> Vizualizarea istoricului cererilor unui angajat
 
  Programări si Evenimente 
 
- Crearea și gestionarea întâlnirilor interne, de exemplu un manager poate stabili o sedinta pentru echipa sa, iar angajatii sai primesc fiecare cate o norificare cu datele despre aceasta locatia/ora 
+-> Crearea și gestionarea întâlnirilor interne, de exemplu un manager poate stabili o sedinta pentru echipa sa, iar angajatii sai primesc fiecare cate o norificare cu datele despre aceasta locatia/ora 
 
- Angajatii au posibilitatea de a accepta sau sugera o alta ora
+-> Angajatii au posibilitatea de a accepta sau sugera o alta ora
