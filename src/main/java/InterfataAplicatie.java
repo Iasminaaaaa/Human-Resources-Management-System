@@ -10,8 +10,8 @@ public class InterfataAplicatie {
         f.setSize(1920, 1080);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JPanel panouPrincipal = new JPanel() {
-            Image imagineFundal = new ImageIcon("C:\\Users\\Iasmina\\Downloads\\ProjectBackgroundJavaP3.jpg").getImage();
+        JPanel panouFundal = new JPanel() {
+        	Image imagineFundal = new ImageIcon("src/main/java/Fotografii/ProjectBackgroundJavaP3.jpg").getImage();
 
             @Override
             protected void paintComponent(Graphics g) {
@@ -19,55 +19,57 @@ public class InterfataAplicatie {
                 g.drawImage(imagineFundal, 0, 0, getWidth(), getHeight(), this);  
             }
         };
-        panouPrincipal.setLayout(new BorderLayout());
+        panouFundal.setLayout(new BorderLayout()); 
 
-        JPanel panouLogare = new JPanel();
-        panouLogare.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
+        JPanel panouLogare = new JPanel(new GridBagLayout());
+        panouLogare.setOpaque(false); 
+        GridBagConstraints c = new GridBagConstraints();
+        c.insets = new Insets(100, 10, 10, 10); 
+        c.anchor = GridBagConstraints.CENTER; 
 
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.CENTER;
-        gbc.insets = new Insets(0, 0, 15, 0);
-
-        JLabel label = new JLabel("Welcome to the Human Resources Management System!");
-        label.setFont(new Font("Arial", Font.BOLD, 50));
-        label.setForeground(Color.WHITE);  
-        panouLogare.add(label, gbc);
-
-        gbc.gridy = 1;
-        gbc.insets = new Insets(5, 0, 15, 0);
-
+        JLabel label1 = new JLabel("Welcome to the Human Resources");
+        label1.setFont(new Font("Times New Roman", Font.BOLD, 50));
+        label1.setForeground(new Color(222, 98, 216)); 
+        c.gridx = 0;
+        c.gridy = 0;
+        panouLogare.add(label1, c);
+        
+        c.insets = new Insets(10, 10, 10, 10);
+        c.gridy++;
+        JLabel label2 = new JLabel("Management System!");
+        label2.setFont(new Font("Times New Roman", Font.BOLD, 50));
+        label2.setForeground(new Color(222, 98, 216));
+        panouLogare.add(label2, c);
+        
+        c.gridy++;
         JLabel emailLabel = new JLabel("Email:");
-        emailLabel.setFont(new Font("Arial", Font.PLAIN, 20));
-        emailLabel.setForeground(Color.WHITE);
-        panouLogare.add(emailLabel, gbc);
+        emailLabel.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+        emailLabel.setForeground(new Color(222, 98, 216));
+        panouLogare.add(emailLabel, c);
 
-        gbc.gridy = 2;
+        c.gridy++;
         JTextField emailField = new JTextField(20);
-        emailField.setFont(new Font("Arial", Font.PLAIN, 20));
-        emailField.setBackground(new Color(255, 255, 255, 180));  // Culoare semitransparentă pentru câmpul de text
-        panouLogare.add(emailField, gbc);
+        emailField.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+        emailField.setBackground(new Color(255, 255, 255, 150)); 
+        panouLogare.add(emailField, c);
 
-        gbc.gridy = 3;
+        c.gridy++;
         JLabel passwordLabel = new JLabel("Password:");
-        passwordLabel.setFont(new Font("Arial", Font.PLAIN, 20));
-        passwordLabel.setForeground(Color.WHITE);
-        panouLogare.add(passwordLabel, gbc);
+        passwordLabel.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+        passwordLabel.setForeground(new Color(222, 98, 216));
+        panouLogare.add(passwordLabel, c);
 
-        gbc.gridy = 4;
+        c.gridy++;
         JPasswordField passwordField = new JPasswordField(20);
-        passwordField.setFont(new Font("Arial", Font.PLAIN, 20));
-        passwordField.setBackground(new Color(255, 255, 255, 180));  
-        panouLogare.add(passwordField, gbc);
+        passwordField.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+        passwordField.setBackground(new Color(255, 255, 255, 150));
+        panouLogare.add(passwordField, c);
 
-        gbc.gridy = 5;
-        gbc.insets = new Insets(15, 0, 0, 0);
-
+        c.gridy++;
         JButton button = new JButton("Log In");
-        button.setFont(new Font("Arial", Font.BOLD, 20));
+        button.setFont(new Font("Times New Roman", Font.BOLD, 20));
         button.setBackground(new Color(255, 105, 180));
-        button.setForeground(Color.WHITE);  
+        button.setForeground(Color.WHITE);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -76,12 +78,15 @@ public class InterfataAplicatie {
                 System.out.println("Email: " + email + ", Password: " + password);
             }
         });
-        panouLogare.add(button, gbc);
+        panouLogare.add(button, c);
 
-        panouPrincipal.add(panouLogare, BorderLayout.EAST);
+        JPanel panouLogareContainer = new JPanel(new BorderLayout());
+        panouLogareContainer.setOpaque(false);
+        panouLogareContainer.add(panouLogare, BorderLayout.WEST); 
 
-        f.add(panouPrincipal);
+        panouFundal.add(panouLogareContainer, BorderLayout.NORTH);
 
+        f.setContentPane(panouFundal);
         f.setVisible(true);
     }
 

@@ -13,12 +13,12 @@ import javax.swing.JOptionPane;
 public class Main {
 	
 	 public static Connection conectareBD(){
-	        String url = "jdbc:mysql://localhost:3306/mydb";
-	        String username = "root";
-	        String password = "";
+	        String url="jdbc:mysql://localhost:3306/mydb";
+	        String username="root";
+	        String password="";
 	        
 	        try {
-	            Connection connection = DriverManager.getConnection(url, username, password);
+	            Connection connection=DriverManager.getConnection(url, username, password);
 	            return connection;
 	        } catch (SQLException e) {
 	            JOptionPane.showMessageDialog(null, e);
@@ -30,10 +30,10 @@ public class Main {
 	 List <Angajat> angajati=new ArrayList<>();
 	 Connection conectare=conectareBD();
 		    
-		    if(conectare!=null) {
-		    	String query="SELECT * FROM angajati";
-		    	try(PreparedStatement stmt=conectare.prepareStatement(query);
-		         ResultSet rs=stmt.executeQuery()) {
+		  if(conectare!=null) {
+		    String query="SELECT * FROM angajati";
+		    try(PreparedStatement stmt=conectare.prepareStatement(query);
+		        ResultSet rs=stmt.executeQuery()) {
 		    	
 		        while (rs.next()) {
 		            int angajatId = rs.getInt("angajat_id");
@@ -70,30 +70,47 @@ public class Main {
 	        try{
 	        	 String query = "INSERT INTO angajati (nume, job, salariu, data_angajare, numar_telefon, email, adresa, manager_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 	             
-	        	 PreparedStatement preparedStmt = conectare.prepareStatement(query);
-	        	 preparedStmt.setString(1, a.getNume());
-	             preparedStmt.setString(2, a.getJob());
-	             preparedStmt.setInt(3, a.getSalariu());
-	             preparedStmt.setDate(4, a.getData());
-	             preparedStmt.setString(5, a.getNrTelefon());
-	             preparedStmt.setString(6, a.getEmail());
-	             preparedStmt.setString(7, a.getAdresa());
-	             preparedStmt.setInt(8, a.getManagerId());
+	        	 PreparedStatement stmt = conectare.prepareStatement(query);
+	        	 stmt.setString(1, a.getNume());
+	        	 stmt.setString(2, a.getJob());
+	        	 stmt.setInt(3, a.getSalariu());
+	             stmt.setDate(4, a.getData());
+	             stmt.setString(5, a.getNrTelefon());
+	             stmt.setString(6, a.getEmail());
+	             stmt.setString(7, a.getAdresa());
+	             stmt.setInt(8, a.getManagerId());
 	     
-	      preparedStmt.execute();
+	      stmt.execute();
 	      JOptionPane.showMessageDialog(null, "Data added");
 
 	        }catch(SQLException | HeadlessException e){
 	            JOptionPane.showMessageDialog(null, e);
 	        }
 	    }
-	
+	 
+		
+	 public static void stergereAngajat(int id) {
+		 Connection conectare=conectareBD();
+			    
+			  if(conectare!=null) {
+			    try{
+			    	PreparedStatement stmt=conectare.prepareStatement("DELETE FROM angajati WHERE angajat_id= ?");
+			        stmt.setInt(1, id);
+			    	stmt.executeUpdate();
+			    	}catch(Exception e) {
+			 
+			    	JOptionPane.showMessageDialog(null, e);
+			    	}
+			  }
+
+	 }
  
     public static void main(String[] args) {
     	
     	new InterfataAplicatie();
         vizualizareInfoAngajati(infoAngajati());
-        inserareAngajati(new Angajat(10,"Mihaile Andra", "Dezvoltator Software", "andra.mihaile@gmail.com", "Strada Vasile Alecsandri, 6", 4500, "0724540806", new Date(12,10, 2022), 2));
-   }
+      //  inserareAngajati(new Angajat(10,"Mihaile Andra", "Dezvoltator Software", "andra.mihaile@gmail.com", "Strada Vasile Alecsandri, 6", 4500, "0724540806", new Date(12,10, 2022), 2));
+        stergereAngajat(14);
+    }
     
 }
