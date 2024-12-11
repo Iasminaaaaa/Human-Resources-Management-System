@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class Main {
 	        }        
 	 }
 	
-	public static List infoAngajati() {
+	public static List<Angajat> infoAngajati() {
 	 List <Angajat> angajati=new ArrayList<>();
 	 Connection conectare=conectareBD();
 		    
@@ -102,15 +103,46 @@ public class Main {
 			    	JOptionPane.showMessageDialog(null, e);
 			    	}
 			  }
-
 	 }
- 
+
+	
+
+	 public static void modificareInfoAngajat(int id, String nume, String job, int salariu, String email, String adresa, String nrTel, LocalDate data, int managerId) {
+	     Connection conectare = conectareBD();
+	     try {
+	         String query = "UPDATE angajati SET nume = ?, job = ?, salariu = ?, data_angajare = ?, numar_telefon = ?, email = ?, adresa = ?, manager_id = ? WHERE angajat_id = ?";
+	         
+	         PreparedStatement stmt = conectare.prepareStatement(query);
+	         stmt.setString(1, nume);
+	         stmt.setString(2, job);
+	         stmt.setInt(3, salariu);
+	         stmt.setDate(4, Date.valueOf(data));
+	         stmt.setString(5, nrTel);
+	         stmt.setString(6, email);
+	         stmt.setString(7, adresa);
+	         stmt.setInt(8, managerId);
+	         stmt.setInt(9, id);
+	         
+	         int rowsUpdated = stmt.executeUpdate();
+	         if (rowsUpdated > 0) {
+	             JOptionPane.showMessageDialog(null, "Data updated successfully");
+	         } else {
+	             JOptionPane.showMessageDialog(null, "No record found with the provided ID");
+	         }
+
+	     } catch (SQLException | HeadlessException e) {
+	         JOptionPane.showMessageDialog(null, e);
+	     }
+	 }
+
+	 
     public static void main(String[] args) {
     	
     	new InterfataAplicatie();
         vizualizareInfoAngajati(infoAngajati());
-      //  inserareAngajati(new Angajat(10,"Mihaile Andra", "Dezvoltator Software", "andra.mihaile@gmail.com", "Strada Vasile Alecsandri, 6", 4500, "0724540806", new Date(12,10, 2022), 2));
-        stergereAngajat(14);
+       // inserareAngajati(new Angajat(10,"Mihaile Andra", "Dezvoltator Software", "andra.mihaile@gmail.com", "Strada Vasile Alecsandri, 6", 4500, "0724540806", new Date(12,10, 2022), 2));
+        stergereAngajat(19);
+        modificareInfoAngajat(4, "Mihaile Andra", "Dezvoltator Software", 4500, "andra.mihaile@gmail.com", "Strada Vasile Alecsandri, 6", "0724540806", LocalDate.of(2023, 12, 20), 2);
     }
     
 }

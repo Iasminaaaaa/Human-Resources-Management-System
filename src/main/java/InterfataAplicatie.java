@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class InterfataAplicatie {
+public class InterfataAplicatie extends JFrame {
 
     public InterfataAplicatie() {
         JFrame f = new JFrame("Human Resources Management System");
