@@ -1,11 +1,12 @@
+package Clase;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class InterfataAplicatie extends JFrame {
+public class InterfataAplicatie1 extends JFrame {
 
-    public InterfataAplicatie() {
+    public InterfataAplicatie1() {
         JFrame f = new JFrame("Human Resources Management System");
         f.setSize(1920, 1080);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,6 +20,7 @@ public class InterfataAplicatie extends JFrame {
                 g.drawImage(imagineFundal, 0, 0, getWidth(), getHeight(), this);  
             }
         };
+        
         panouFundal.setLayout(new BorderLayout()); 
 
         JPanel panouLogare = new JPanel(new GridBagLayout());
@@ -90,7 +92,4 @@ public class InterfataAplicatie extends JFrame {
         f.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        new InterfataAplicatie();
-    }
 }
