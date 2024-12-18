@@ -1,3 +1,4 @@
+package Main;
 import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.Date;
@@ -10,6 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JOptionPane;
+
+import Clase.Angajat;
+import Clase.InterfataAplicatie1;
 
 public class Main {
 	
@@ -138,7 +142,7 @@ public class Main {
 	 
     public static void main(String[] args) {
     	
-    	new InterfataAplicatie();
+    	new InterfataAplicatie1();
         vizualizareInfoAngajati(infoAngajati());
        // inserareAngajati(new Angajat(10,"Mihaile Andra", "Dezvoltator Software", "andra.mihaile@gmail.com", "Strada Vasile Alecsandri, 6", 4500, "0724540806", new Date(12,10, 2022), 2));
         stergereAngajat(19);
