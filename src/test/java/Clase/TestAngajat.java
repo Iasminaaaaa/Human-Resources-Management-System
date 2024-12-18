@@ -7,6 +7,8 @@ import java.sql.Date;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import clase.Angajat;
+
 class TestAngajat {
 
     private Angajat angajat1;

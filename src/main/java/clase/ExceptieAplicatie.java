@@ -1,4 +1,4 @@
-package Clase;
+package clase;
 
 /**
  * Clasa ExceptieAplicatie extinde Clasa Exception, utila pentru a arunca exceptii specifice aplicatiei

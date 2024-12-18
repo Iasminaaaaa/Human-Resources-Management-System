@@ -7,6 +7,9 @@ import java.sql.Date;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import clase.Cerere;
+import clase.ExceptieAplicatie;
+
 class TestCerere {
 	private Cerere cerere1;
 	private Cerere cerere2;

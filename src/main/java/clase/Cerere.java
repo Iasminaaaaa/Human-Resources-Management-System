@@ -1,4 +1,4 @@
-package Clase;
+package clase;
 import java.util.Date;
 
 /**
@@ -9,7 +9,7 @@ public class Cerere{
 private String cerereId, comentariiManager;
 private String status;
 private Date dataInceput, dataSfarsit;
-enum tipCerere{Concediu, Invoire, Demisie};
+public enum tipCerere{Concediu, Invoire, Demisie};
 private tipCerere tc;
 
 /**
