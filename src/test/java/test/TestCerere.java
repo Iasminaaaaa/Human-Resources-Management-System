@@ -1,4 +1,4 @@
-package Clase;
+package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,8 +7,8 @@ import java.sql.Date;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import clase.Cerere;
-import clase.ExceptieAplicatie;
+import model.Cerere;
+import model.ExceptieAplicatie;
 
 class TestCerere {
 	private Cerere cerere1;

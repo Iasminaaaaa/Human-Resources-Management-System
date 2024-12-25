@@ -1,6 +1,6 @@
-package clase;
-import java.util.Date;
+package model;
 
+import java.sql.Date;
 
 /**
  *Clasa RaportPerformanta conține informații despre raportul de performanță al unui angajat.
@@ -8,9 +8,10 @@ import java.util.Date;
  * Clasa este folosită pentru a stoca și manipula rapoartele de performanță ale angajaților
  */
 public class RaportPerformanta {
-private String raportId, comentarii;
-private int scor;
+private String comentarii;
+private int raportId, scor;
 private Date dataEvaluare;
+private int angajatId;
 
 /**
 * Constructor fara parametrii pentru clasa RaportPerformanta
@@ -23,19 +24,21 @@ public RaportPerformanta() {};
 * @param com comentarii referitoare la raportul de performanta
 * @param s scorul obtinut de angajat
 * @param dataEv data evaluarii performanței angajatului
+* @param angId id-ul angajatului
 */
-public RaportPerformanta(String rId, String com, int s, Date dataEv) {
+public RaportPerformanta(int rId, String com, int s, Date dataEv, int angId) {
 	raportId=rId;
     comentarii=com;
 	scor=s;
 	dataEvaluare=dataEv;
+	angajatId=angId;
 }
 
 /**
  * Obține ID-ul raportului de performanta
  * @return ID-ul raportului
  */
-public String getRaprtId() {
+public int getRaprtId() {
     return raportId;
 }
 
@@ -67,7 +70,7 @@ public Date getDataEvaluare() {
  * Seteaza ID-ul raportului de performanta.
  * @param rapId ID-ul raportului
  */
-public void setRaprtId(String rapId) {
+public void setRaprtId(int rapId) {
     this.raportId=rapId;
 }
 
@@ -93,6 +96,14 @@ public void setScor(int scor) {
  */
 public void setDataEvaluare(Date dataEvaluare) {
     this.dataEvaluare=dataEvaluare;
+}
+
+/**
+ * Metoda getId() nu are parametrii 
+ * @return ID-ul angajatului.
+ */
+public int getId() {
+	return angajatId;
 }
 
 /**

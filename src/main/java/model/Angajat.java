@@ -1,10 +1,9 @@
-package clase;
+package model;
 import java.sql.Date;
 
 /*
  * Clasa Angajat contine informatii despre angajatii unei firme precum  nume, job, email, adresa, salariu, numar de telefon, data angajarii, id-ul managerului si al angajatului
  */
-
 public class Angajat {
 private String nume, job, email, adresa;
 private int id;
@@ -21,13 +20,13 @@ public Angajat() {};
 /*
  * Constructor cu parametrii pentru clasa Angajat
  * @param i ID-ul angajatului
- * @param n Numele angajatului
- * @param j Job-ul angajatului
- * @param em Email-ul angajatului
- * @param adr Adresa angajatului
- * @param sal Salariul angajatului
- * @param nrTel Numarul de telefon al angajatului
- * @param d Data angajarii
+ * @param n numele angajatului
+ * @param j job-ul angajatului
+ * @param em email-ul angajatului
+ * @param adr adresa angajatului
+ * @param sal salariul angajatului
+ * @param nrTel numarul de telefon al angajatului
+ * @param d data angajarii
  * @param mId ID-ul managerului
  */
 public Angajat(int i, String n, String j, String em, String adr, int sal, String nrTel, Date d, int mId) {
@@ -59,7 +58,7 @@ public String getNume() {
 }
 
 /**
- * Metoda getJob() nu are parametri.
+ * Metoda getJob() nu are parametri
  * @return job-ul angajatului.
  */
 public String getJob() {
@@ -91,15 +90,15 @@ public int getSalariu() {
 }
 
 /**
- * Metoda getNrTelefon() nu are parametri.
- * @return numărul de telefon al angajatului.
+ * Metoda getNrTelefon() nu are parametri
+ * @return numărul de telefon al angajatului
  */
 public String getNrTelefon() {
 	return nrTelefon;
 }
 
 /**
- * Metoda getData() nu are parametri.
+ * Metoda getData() nu are parametri
  * @return data angajării.
  */
 public Date getData() {
@@ -107,15 +106,15 @@ public Date getData() {
 }
 
 /**
- * Metoda getManagerId() nu are parametri.
- * @return ID-ul managerului.
+ * Metoda getManagerId() nu are parametri
+ * @return ID-ul managerului
  */
 public int getManagerId() {
 	return managerId;
 }
 
 /**
- * Metoda toString() este suprascrisa pentru a afisa informatiile unui angajat.
+ * Metoda toString() este suprascrisa pentru a afisa informatiile unui angajat
  * @return sub forma de string detaliile angajatului
  */
 @Override
