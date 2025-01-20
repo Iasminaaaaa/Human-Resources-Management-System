@@ -1,23 +1,23 @@
 package model;
 import java.sql.Date;
 
-/*
+/**
  * Clasa Angajat contine informatii despre angajatii unei firme precum  nume, job, email, adresa, salariu, numar de telefon, data angajarii, id-ul managerului si al angajatului
  */
 public class Angajat {
 private String nume, job, email, adresa;
 private int id;
-private int salariu;
+private double salariu;
 private String nrTelefon;
 private Date dataAngajare;
 private int managerId;
 
-/*
+/**
  * Constructor fara parametrii pentru clasa Angajat
  */
 public Angajat() {};
 
-/*
+/**
  * Constructor cu parametrii pentru clasa Angajat
  * @param i ID-ul angajatului
  * @param n numele angajatului
@@ -29,7 +29,7 @@ public Angajat() {};
  * @param d data angajarii
  * @param mId ID-ul managerului
  */
-public Angajat(int i, String n, String j, String em, String adr, int sal, String nrTel, Date d, int mId) {
+public Angajat(int i, String n, String j, String em, String adr, double sal, String nrTel, Date d, int mId) {
 	id=i;
 	nume=n;
 	job=j;
@@ -85,7 +85,7 @@ public String getAdresa() {
  * Metoda getSalariu() nu are parametri.
  * @return salariul angajatului.
  */
-public int getSalariu() {
+public double getSalariu() {
 	return salariu;
 }
 

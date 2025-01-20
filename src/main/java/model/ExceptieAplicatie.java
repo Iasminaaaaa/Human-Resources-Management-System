@@ -2,7 +2,6 @@ package model;
 
 /**
  * Clasa ExceptieAplicatie extinde Clasa Exception, utila pentru a arunca exceptii specifice aplicatiei
- * 
  */
 public class ExceptieAplicatie extends Exception{
 

@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"baza_de_date","l":"BazaDate"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"gui.angajati","l":"InterfataAngajati"},{"p":"gui.angajati","l":"VizualizareCereriPerAngajat"},{"p":"gui.angajati","l":"VizualizareEchipa"},{"p":"gui.angajati","l":"VizualizareRapoartePerAngajat"}];updateSearchResults();

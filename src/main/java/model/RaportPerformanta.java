@@ -12,6 +12,7 @@ private String comentarii;
 private int raportId, scor;
 private Date dataEvaluare;
 private int angajatId;
+private int managerId;
 
 /**
 * Constructor fara parametrii pentru clasa RaportPerformanta
@@ -26,12 +27,13 @@ public RaportPerformanta() {};
 * @param dataEv data evaluarii performanței angajatului
 * @param angId id-ul angajatului
 */
-public RaportPerformanta(int rId, String com, int s, Date dataEv, int angId) {
+public RaportPerformanta(int rId, String com, int s, Date dataEv, int angId, int manId) {
 	raportId=rId;
     comentarii=com;
 	scor=s;
 	dataEvaluare=dataEv;
 	angajatId=angId;
+	managerId=manId;
 }
 
 /**
@@ -104,6 +106,14 @@ public void setDataEvaluare(Date dataEvaluare) {
  */
 public int getId() {
 	return angajatId;
+}
+
+/**
+ * Metoda getManId() nu are parametrii 
+ * @return ID-ul managerului.
+ */
+public int getManId() {
+	return managerId;
 }
 
 /**
