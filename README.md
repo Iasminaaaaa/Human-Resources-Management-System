@@ -118,7 +118,7 @@ Relații principale între tabele:
 
 -> Vizualizarea si modificarea datelor angajatiilor
 
--> Ștergerea informațiilor despre acestia daca demisioneaza/sunt concediati
+-> Arhivarea informațiilor despre acestia daca demisioneaza/sunt concediati
  
 -> Evaluarea Performanței de catre managerul de echipa
  
@@ -135,9 +135,3 @@ Gestionarea Cererilor
 -> Aprobat sau respins de către manageri
 
 -> Vizualizarea istoricului cererilor unui angajat
-
- Programări si Evenimente 
-
--> Crearea și gestionarea întâlnirilor interne, de exemplu un manager poate stabili o sedinta pentru echipa sa, iar angajatii sai primesc fiecare cate o norificare cu datele despre aceasta locatia/ora 
-
--> Angajatii au posibilitatea de a accepta sau sugera o alta ora
