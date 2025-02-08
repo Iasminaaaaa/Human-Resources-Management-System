@@ -1,6 +1,7 @@
 package app;
 
 
+import bd.BazaDate;
 import controller.GestionareAngajati;
 import controller.GestionareCereri;
 import controller.GestionareConturi;
@@ -10,7 +11,7 @@ import gui.InterfataAp;
 /**
  * Clasa principala a aplicatiei care initializeaza baza de date si porneste interfata grafica
  */
-public class Main {
+public class MainHRMS {
 
 	 /**
      * Metoda principala a aplicatiei
@@ -18,6 +19,7 @@ public class Main {
      * @param args argumentele liniei de comanda (neutilizate in aceasta aplicatie)
      */
     public static void main(String[] args) {
+    	BazaDate.creareBazaDate();
     	GestionareAngajati.creareTabelAngajati();
     	GestionareAngajati.creareTabelAngajatiArhivati();
     	GestionareConturi.creareTabelConturi(); 

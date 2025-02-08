@@ -15,6 +15,8 @@ Aceasta aplicatie vine in ajutorul companiilor, punandu-le la dispozitie un mod 
 
  Obiectiv 4: Gestionarea fara probleme a cererilor de concediu, invoire, demisie, printr-un sistem rapid care ofera sansa primirii unei aprobari sau respingeri din partea managerului intr-un mod eficient
 
+ Obiectiv 5: Oferirea unei modalitati prin care managerii și echipele lor să programeze întâlniri de comun acord, să comunice detalii importante și să trimită notificări.
+
 ## Arhitectura
   Clasa Angajat contine nume, pozitie, salariu, dataAngajarii, telefon, email, adresa
 
@@ -86,16 +88,19 @@ Baza de date
 
  status - Statusul cererii (aprobat, respins, in asteptare).
 
- 4. Tabelul istoric_modificari_job
+4. Tabelul Evenimente: Gestionează programările și evenimentele interne ale companiei.
 
- 5. Tabelul istoric_modificari_salariu
+ Coloane:
 
- 6. Tabelul istoric_modificari_manager
+ eveniment_id - Cheia primară, identificator unic pentru fiecare eveniment.
 
- 7. Tabelul conturi contine email-ul, parola angajatului si tipul contului(Employee, Administrator, Manager)
+ nume_eveniment - Numele evenimentului.
+
+ data_eveniment - Data și ora la care are loc evenimentul.
+
+ locatie - Locul desfășurării evenimentului.
 
 Relații principale între tabele:
-Angajati -Cont: Fiecare angajat are un cont
 
  Angajati - Cereri: Asociază fiecare cerere cu angajatul care a făcut solicitarea.
 
@@ -105,7 +110,7 @@ Angajati -Cont: Fiecare angajat are un cont
 ## Functionalitati/Exemple utilizare
  Autentificare
 
--> Angajatii, managerii si administratorii au un cont cu care se pot autentifica
+-> Angajatii au un cont cu care se pot autentifica
 
  Managementul Angajaților:
  
@@ -113,17 +118,13 @@ Angajati -Cont: Fiecare angajat are un cont
 
 -> Vizualizarea si modificarea datelor angajatiilor
 
--> Salvarea istoricului modificarilor care au loc la nivel de job, manager si salariu
-
--> Arhivarea informațiilor despre acestia daca demisioneaza/sunt concediati
+-> Ștergerea informațiilor despre acestia daca demisioneaza/sunt concediati
  
 -> Evaluarea Performanței de catre managerul de echipa
  
 -> Crearea de rapoarte in care sunt evaluati angajații pe care ii are in subordine un manager
 
--> Crearea de rapoarte de catre administratori pentru managerii pe care ii au in subordine
-
--> Administratorul are posibilitatea de a vizualiza rapoartele de performanta asupra companiei
+-> Posibilitatea ca angajatii sa ofere feedback pentru evaluarile primite(scoruri, comentarii).
 
 Gestionarea Cererilor
  
@@ -131,6 +132,12 @@ Gestionarea Cererilor
 
 -> Înaintarea cererilor de concediu (tip de concediu, date).
 
--> Aprobat sau respins de către manageri sau administratori
+-> Aprobat sau respins de către manageri
 
 -> Vizualizarea istoricului cererilor unui angajat
+
+ Programări si Evenimente 
+
+-> Crearea și gestionarea întâlnirilor interne, de exemplu un manager poate stabili o sedinta pentru echipa sa, iar angajatii sai primesc fiecare cate o norificare cu datele despre aceasta locatia/ora 
+
+-> Angajatii au posibilitatea de a accepta sau sugera o alta ora
