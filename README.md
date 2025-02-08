@@ -11,11 +11,8 @@ Aceasta aplicatie vine in ajutorul companiilor, punandu-le la dispozitie un mod 
 
  Obiectiv 2: Facilitarea crearii de rapoarte de performanta pentru fiecare angajat intr-o maniera structurata pentru cresterea nivelului de dezvoltare profesionala a angajatilor
 
- Obiectiv 3: Îmbunătățirea comunicarii dintre angajat si manager prin intermediul feedback-ului pe care angajatii il pot transmite in urma primirii raportului de performanta
-
- Obiectiv 4: Gestionarea fara probleme a cererilor de concediu, invoire, demisie, printr-un sistem rapid care ofera sansa primirii unei aprobari sau respingeri din partea managerului intr-un mod eficient
-
- Obiectiv 5: Oferirea unei modalitati prin care managerii și echipele lor să programeze întâlniri de comun acord, să comunice detalii importante și să trimită notificări.
+ Obiectiv 3: Gestionarea fara probleme a cererilor de concediu, invoire, demisie, printr-un sistem rapid care ofera sansa primirii unei aprobari sau respingeri din partea managerului intr-un mod eficient
+ 
 
 ## Arhitectura
   Clasa Angajat contine nume, pozitie, salariu, dataAngajarii, telefon, email, adresa
