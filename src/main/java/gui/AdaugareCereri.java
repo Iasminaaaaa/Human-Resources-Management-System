@@ -4,11 +4,15 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.Date;
+
+import javax.swing.BorderFactory;
 import javax.swing.DefaultListCellRenderer;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
@@ -17,6 +21,7 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.plaf.basic.BasicComboBoxUI;
@@ -179,7 +184,27 @@ public class AdaugareCereri extends JDialog {
                 }
             }
         });
+        
+        ImageIcon originalIcon1 = new ImageIcon(getClass().getResource("/Fotografii/error.png"));
+        Image img1 = originalIcon1.getImage(); 
+        Image resizedImg1 = img1.getScaledInstance(32, 32, Image.SCALE_SMOOTH);
+        ImageIcon resizedIcon1=new ImageIcon(resizedImg1);
+        UIManager.put("OptionPane.errorIcon", resizedIcon1);
 
+        ImageIcon originalIcon3 = new ImageIcon(getClass().getResource("/Fotografii/exclamation.png"));
+        Image img3 = originalIcon3.getImage(); 
+        Image resizedImg3 = img3.getScaledInstance(32, 32, Image.SCALE_SMOOTH);
+        ImageIcon resizedIcon3=new ImageIcon(resizedImg3); 
+        UIManager.put("OptionPane.informationIcon", resizedIcon3);
+      
+        UIManager.put("Button.border", BorderFactory.createLineBorder(Color.WHITE, 3));  
+        UIManager.put("Button.select", new Color(222, 98, 216));
+        UIManager.put("OptionPane.background", new Color(222, 98, 216)); 
+        UIManager.put("Panel.background", new Color(222, 98, 216)); 
+        UIManager.put("Button.background", new Color(0, 255, 255)); 
+        UIManager.put("Button.foreground", new Color(0, 0, 0)); 
+        UIManager.put("Button.pressed", Color.WHITE); 
+        
         contentPanel.add(btnAddRequest);
         setContentPane(contentPanel);
     }
