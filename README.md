@@ -1,134 +1,49 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/31XZyb90)
-# Sistem de Management al Resurselor Umane
-### Gușcă Ana-Maria-Iasmina
+<h1 align="center">Welcome to Human-Resources-Management-System 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Java" src="https://img.shields.io/badge/Java-red" />
+  <img alt="MariaDB" src="https://img.shields.io/badge/MariaDB-blue" />
+  <img alt="WindowBuilder" src="https://img.shields.io/badge/WindowBuilder-green" />
+  <img alt="GitHub" src="https://img.shields.io/badge/GitHub-black" />
+</p>
 
-## Descriere
-Aceasta aplicatie vine in ajutorul companiilor, punandu-le la dispozitie un mod eficient prin care sa gestioneze informatiile despre angajati, cererile de concediu, de invoire sau de demisie, si sa monitorizeze performanta acestora.
+> 🧾 A desktop application built for small businesses to streamline HR management.  
+It manages employee data, requests, and performance evaluations through a 3-level role system: **administrator**, **manager**, and **employee**, ensuring efficient approvals and continuous performance tracking.
 
+### 🏠 [Homepage]( )
 
-## Obiective
- Obiectiv 1: Usurarea procesului de cautare a informatiile necesare in legatura cu un angajat, o cerere sau performanta angajatiilor unei echipe 
+<div align="center"><img width="1920" height="1080" alt="login1" src="https://github.com/user-attachments/assets/c59cbbe9-4a0d-4fbe-af2c-d846670a1b0a" />
+<img width="1920" height="1080" alt="loginError" src="https://github.com/user-attachments/assets/1f1699cb-bcf7-4259-b783-471264da38dd" />
+<img width="1920" height="1080" alt="interfataManager" src="https://github.com/user-attachments/assets/c1c043ab-293e-47f3-8eea-12930da0dd09" />
+ <img width="1920" height="1080" alt="interfataAngajat" src="https://github.com/user-attachments/assets/7ac5fe64-4f6d-4e16-87fb-7993c5c96bc2" />
 
- Obiectiv 2: Facilitarea crearii de rapoarte de performanta pentru fiecare angajat intr-o maniera structurata pentru cresterea nivelului de dezvoltare profesionala a angajatilor
-
- Obiectiv 3: Gestionarea fara probleme a cererilor de concediu, invoire, demisie, printr-un sistem rapid care ofera sansa primirii unei aprobari sau respingeri din partea managerului intr-un mod eficient
- 
-
-## Arhitectura
-  Clasa Angajat contine nume, pozitie, salariu, dataAngajarii, telefon, email, adresa
-
-Metode: actualizeazaInformatii si toString() suprascrisa pentru afisare, adaugaAngajat, stergeAngajat
-
-  Clasa RaportPerformanta contine raportId, dataEvaluare, scor, comentarii
-
-Metode: gettere și settere, adaugaRaport
-
-  Clasa Cerere contine cerereId, tipCerere, dataInceput, dataSfarsit, status, comentariiManager
-
-Metode: actualizeazaStatus, adaugaCerere(cerere)
-
-  Clasa Eveniment contine evenimentId, numeEveniment, dataEveniment, locatie
-
-Metode: gettere și settere, adaugaEveniment(eveniment)
-
-Baza de date
-
-1. Tabelul Angajati: Înregistrează informatiile despre angajati
-
- Coloane:
-
- angajat_id - Cheie primară, identificator unic pentru fiecare angajat.
-
- nume - Numele complet al angajatului.
-
- pozitie - Poziția în firmă.
-
- salariu - Salariul angajatului.
-
- data_angajare - Data angajării.
-
- numar_telefon - Numărul de telefon al angajatului.
-
- email - Adresa de email.
-
- adresa - Adresa de domiciliu.
-
- manager_id - Legătură către managerul angajatului (poate fi NULL pentru angajatii care nu au manager).
-
-2. Tabelul Rapoarte: Înregistrează rapoartele fiecărui angajat.
-
- Coloane:
-
- evaluare_id - Cheie primară, identificator unic pentru fiecare raport
-
- angajat_id - Foreign key 
-
- data_evaluare - Data evaluării.
-
- scor - Scorul de performanță acordat în evaluare.
-
- comentariile - Observații și feedback al managerului care evaluează 
-
-3. Tabelul Cereri: Reprezintă cererile de concediu și alte cereri administrative făcute de angajați.
-
- Coloane:
-
- cerere_id - Cheie primară, identificator unic pentru fiecare cerere.
-
- angajat_id - Foreign key
-
- tip_cerere - Tipul cererii (concediu, invoire, demisie).
-
- data_inceput - Data de început a cererii (de exemplu, începutul concediului).
-
- data_sfarsit - Data de sfârșit a cererii.
-
- status - Statusul cererii (aprobat, respins, in asteptare).
-
-4. Tabelul Evenimente: Gestionează programările și evenimentele interne ale companiei.
-
- Coloane:
-
- eveniment_id - Cheia primară, identificator unic pentru fiecare eveniment.
-
- nume_eveniment - Numele evenimentului.
-
- data_eveniment - Data și ora la care are loc evenimentul.
-
- locatie - Locul desfășurării evenimentului.
-
-Relații principale între tabele:
-
- Angajati - Cereri: Asociază fiecare cerere cu angajatul care a făcut solicitarea.
-
- Angajati - Rapoarte: Legătura între un angajat și rapoartele primite de la manager 
+<img width="1920" height="1080" alt="interfata" src="https://github.com/user-attachments/assets/b35459e7-8b58-42b4-8a9d-a825a86e47b4" />
+<img width="1920" height="1080" alt="infoEmployee" src="https://github.com/user-attachments/assets/37031706-8166-4f46-9540-84d64d65c83c" />
 
 
-## Functionalitati/Exemple utilizare
- Autentificare
+</div>
 
--> Angajatii au un cont cu care se pot autentifica
+## 📅 Project Duration
+**October 2024 – February 2025**
 
- Managementul Angajaților:
- 
--> Înregistrarea informațiilor despre angajați: Nume, pozitie in firma, salariu, data angajarii, numarul de telefon, email-ul, adresa
+## 💻 Tech Stack
+- **Java** (core development)
+- **WindowBuilder** for GUI design
+- **MariaDB** via **XAMPP** for data storage and visualization
+- **Git/GitHub** for version control and collaboration
 
--> Vizualizarea si modificarea datelor angajatiilor
+## 🚀 Features
+- Multi-role system: administrator, manager, employee  
+- Employee data and request management  
+- Continuous performance evaluation tracking  
+- GUI built with Java Swing (WindowBuilder)  
+- Database integration and visualization using MariaDB/XAMPP  
 
--> Arhivarea informațiilor despre acestia daca demisioneaza/sunt concediati
- 
--> Evaluarea Performanței de catre managerul de echipa
- 
--> Crearea de rapoarte in care sunt evaluati angajații pe care ii are in subordine un manager
+## 🛠️ Installation
 
--> Posibilitatea ca angajatii sa ofere feedback pentru evaluarile primite(scoruri, comentarii).
+```sh
+# Clone the repository
+git clone https://github.com/Iasminaaaaa/Human-Resources-Management-System.git
 
-Gestionarea Cererilor
- 
--> Tipuri de cerere: cerere de concediu, de invoire, de demisie
-
--> Înaintarea cererilor de concediu (tip de concediu, date).
-
--> Aprobat sau respins de către manageri
-
--> Vizualizarea istoricului cererilor unui angajat
+# Open the project in your preferred Java IDE (e.g., IntelliJ, Eclipse, NetBeans)
+# Ensure MariaDB/XAMPP is running and the database is properly configured
