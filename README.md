@@ -4,7 +4,6 @@
   <img alt="Java" src="https://img.shields.io/badge/Java-red" />
   <img alt="MariaDB" src="https://img.shields.io/badge/MariaDB-blue" />
   <img alt="WindowBuilder" src="https://img.shields.io/badge/WindowBuilder-green" />
-  <img alt="GitHub" src="https://img.shields.io/badge/GitHub-black" />
 </p>
 
 > 🧾 A desktop application built for small businesses to streamline HR management.  
